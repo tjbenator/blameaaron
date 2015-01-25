@@ -21,7 +21,7 @@ include('database.php');
 		$query->execute();
 		$facts = $query->fetchAll(PDO::FETCH_ASSOC);
 		foreach ($facts as $row) {
-			echo '<li>' . $row['tidbit'] . '</li>';
+			echo "<li title='#{$row['id']}'>{$row['tidbit']}</li>";
 		}
 	?>
 	</ul>
