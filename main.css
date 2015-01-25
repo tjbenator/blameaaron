@@ -9,14 +9,6 @@ body {
 	height: 100%;
 }
 
-/* The element to be centered, can
-   also be of any width and height */ 
-.centered {
-  display: inline-block;
-  vertical-align: middle;
-  width: 300px;
-}
-
 ul {
 	text-align: left;
 	list-style-position: inside;
