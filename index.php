@@ -5,6 +5,7 @@ include('database.php');
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<title>Blame Aaron</title>
 </head>
@@ -14,14 +15,14 @@ include('database.php');
 		<h1>Reasons to blame Aaron:</h1>
 	</header>
 	<div class="reasons">
-	<ul>
+	<ul class="fa-ul">
 	<?php
 		$sql = "SELECT id, tidbit FROM bucket_facts WHERE lower(fact) = 'reasons to blame aaron' ORDER BY RAND()";
 		$query = $dbo->prepare($sql);
 		$query->execute();
 		$facts = $query->fetchAll(PDO::FETCH_ASSOC);
 		foreach ($facts as $row) {
-			echo "<li title='#{$row['id']}'>{$row['tidbit']}</li>";
+			echo "<li title='#{$row['id']}'><i class='fa-li fa fa-check-square'></i> {$row['tidbit']}</li>";
 		}
 	?>
 	</ul>
