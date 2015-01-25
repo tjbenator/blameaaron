@@ -22,6 +22,8 @@ header {
 
 	background-color: #333;
 	border-bottom: thick solid #fff;
+	display:block;
+	z-index: 1000;
 }
 
 h1 {
@@ -30,6 +32,7 @@ h1 {
 }
 
 .reasons {
+	z-block: 100;
 	margin-top: 165px;
 }
 
