@@ -16,15 +16,18 @@ include('database.php');
 	</header>
 	<div class="reasons">
 	<ul class="fa-ul">
-	<?php
+		<?php
 		$sql = "SELECT id, tidbit FROM bucket_facts WHERE lower(fact) = 'reasons to blame aaron' ORDER BY RAND()";
 		$query = $dbo->prepare($sql);
 		$query->execute();
 		$facts = $query->fetchAll(PDO::FETCH_ASSOC);
-		foreach ($facts as $row) {
-			echo "<li title='#{$row['id']}'><i class='fa-li fa fa-check-square'></i> {$row['tidbit']}</li>";
-		}
-	?>
+		?>
+		<?php foreach ($facts as $row): ?>
+			<li title='#<?php echo $row['id']; ?>'>
+				<i class='fa-li fa fa-check-square'></i>
+				<?php echo htmlentities($row['tidbit']); ?>
+			</li>
+		<?php endforeach; ?>
 	</ul>
 	</div>
 	<footer>
