@@ -32,7 +32,6 @@ include('database.php');
 	</ul>
 	</div>
 	<footer>
-		Also see <a href='http://aaronlogic.com'>AaronLogic.com</a>
 	</footer>
 </body>
 </html>
